@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+@layer base {
+  body {
+    background-color: #000000;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    @apply animate-move-bg;
+  }
+}
