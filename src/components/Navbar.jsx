@@ -1,12 +1,13 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
 
-export default function Navbar() {
+export default function Navbar({ onNavItemClick }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const handleNavItemClick = (sectionId) => {
+    setIsOpen(false); // Close the navbar
+    onNavItemClick(sectionId); // Scroll to the section
   };
 
   return (
@@ -19,7 +20,7 @@ export default function Navbar() {
         <div className="text-lg font-semibold">Home</div>
 
         {/* Hamburger Menu */}
-        <button className="block sm:hidden" onClick={toggleMenu}>
+        <button className="block sm:hidden" onClick={() => setIsOpen(!isOpen)}>
           <div className="space-y-1">
             <span className="block w-6 h-0.5 bg-white"></span>
             <span className="block w-6 h-0.5 bg-white"></span>
@@ -42,6 +43,7 @@ export default function Navbar() {
                   <a
                     href="#home"
                     className="p-2 block text-center hover:bg-gray-800"
+                    onClick={() => handleNavItemClick("home")}
                   >
                     Home
                   </a>

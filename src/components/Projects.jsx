@@ -1,35 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import washioImage from "../assets/images/washio.png"; // Import the washio image
 
-// URL links to white programming language icons
+// Simple Icons URLs for programming languages and tools
 const toolLogos = [
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/javascript.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/python.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/nodedotjs.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/html5.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/css3.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/typescript.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/react.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/vuedotjs.svg",
 ];
 
-// URL links to white tool icons
 const toolIcons = [
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framer/framer-original.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/visualstudiocode.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/figma.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/jetbrains.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/markdown.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/framer.svg",
 ];
 
 // Sample project data
 const projects = [
   {
-    title: "Project 1",
-    description: "A brief description of Project 1.",
-    image: "https://via.placeholder.com/300x200",
-    github: "https://github.com/yourusername/project1",
-    website: "https://project1.com",
+    title: "Washio",
+    description:
+      "Wash.io is a convenient app that allows users to book \n  a time slot for using the washing machine on their floor. ",
+    image: washioImage, // Use the imported washio image
+    github: "https://github.com/KingRain/Washio",
+    website: "https://washio.netlify.app/",
   },
   {
     title: "Project 2",
@@ -67,7 +68,7 @@ export default function Projects() {
     <>
       <section
         id="projects"
-        className="min-h-screen relative overflow-hidden bg-black"
+        className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black"
       >
         {/* Animated dots background */}
         <div className="absolute inset-0 z-0">
@@ -75,7 +76,7 @@ export default function Projects() {
             className="w-full h-full animate-move-bg"
             style={{
               backgroundImage:
-                "radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px)",
+                "radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
               backgroundSize: "50px 50px",
             }}
           ></div>
@@ -83,18 +84,18 @@ export default function Projects() {
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-16">
-          <h2 className="text-4xl font-bold text-white mb-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">
             Projects
           </h2>
 
           {/* Project Carousel */}
-          <div className="overflow-hidden mb-4 relative">
+          <div className="overflow-hidden mb-8 relative">
             <motion.div
               className="flex cursor-grab active:cursor-grabbing"
               drag="x"
               dragConstraints={{
                 right: 0,
-                left: -((projects.length - 1) * 320),
+                left: -((projects.length - 1) * 340),
               }}
               animate={controls}
               onDragEnd={handleDragEnd}
@@ -102,15 +103,15 @@ export default function Projects() {
               {projects.map((project, index) => (
                 <motion.div
                   key={index}
-                  className="min-w-[300px] bg-[#545454] rounded-lg shadow-lg m-4 flex-shrink-0"
+                  className="min-w-[320px] bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl shadow-lg m-4 flex-shrink-0 overflow-hidden border border-gray-200 border-opacity-20"
                 >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-40 object-cover rounded-t-lg"
+                    className="w-full h-48 object-cover"
                   />
-                  <div className="p-4">
-                    <h3 className="text-xl font-bold text-white mb-2">
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-white mb-3">
                       {project.title}
                     </h3>
                     <p className="text-gray-300 mb-4">{project.description}</p>
@@ -119,7 +120,7 @@ export default function Projects() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-gray-700 text-white px-3 py-1 rounded hover:bg-gray-600"
+                        className="bg-gray-700 bg-opacity-50 text-white px-4 py-2 rounded-lg hover:bg-opacity-70 transition duration-300"
                       >
                         GitHub
                       </a>
@@ -127,7 +128,7 @@ export default function Projects() {
                         href={project.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-500"
+                        className="bg-blue-600 bg-opacity-50 text-white px-4 py-2 rounded-lg hover:bg-opacity-70 transition duration-300"
                       >
                         Website
                       </a>
@@ -139,7 +140,7 @@ export default function Projects() {
           </div>
 
           {/* Card Indicator */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-12">
             {projects.map((_, index) => (
               <button
                 key={index}
@@ -157,7 +158,7 @@ export default function Projects() {
         </div>
 
         {/* Carousels Container */}
-        <div className="relative z-10 bg-[#545454]">
+        <div className="relative z-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg">
           {/* Animated technology logo carousel */}
           <div className="overflow-hidden border-t border-b border-gray-700 py-8 relative">
             <motion.div
@@ -179,7 +180,7 @@ export default function Projects() {
                   <img
                     src={logo}
                     alt="Programming Language Logo"
-                    className="w-16 h-16 filter invert"
+                    className="w-14 h-14  invert"
                   />
                 </div>
               ))}
@@ -207,7 +208,7 @@ export default function Projects() {
                   <img
                     src={icon}
                     alt="Tool Icon"
-                    className="w-16 h-16 filter invert"
+                    className="w-16 h-16 invert"
                   />
                 </div>
               ))}

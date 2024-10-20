@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Projects from "./components/Projects";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
+  const heroRef = useRef(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -34,6 +35,21 @@ function App() {
     };
   }, []);
 
+  const handleNavItemClick = (sectionId) => {
+    let ref;
+    switch (sectionId) {
+      case "home":
+        ref = heroRef;
+        break;
+      // Add cases for other sections...
+      default:
+        ref = null;
+    }
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       <div className="absolute inset-0 z-10">
@@ -47,8 +63,8 @@ function App() {
         ></div>
       </div>
       <div className="relative z-20">
-        <Navbar activeSection={activeSection} />
-        <HeroSection />
+        <Navbar onNavItemClick={handleNavItemClick} />
+        <HeroSection ref={heroRef} />
         <Projects />
       </div>
     </div>
