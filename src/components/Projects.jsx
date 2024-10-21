@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
-import washioImage from "../assets/images/washio.png"; // Import the washio image
+import washioImage from "../assets/images/washio.png";
 
 // Simple Icons URLs for programming languages and tools
 const toolLogos = [
@@ -26,19 +26,33 @@ const toolIcons = [
 const projects = [
   {
     title: "Washio",
-    description:
-      "Wash.io is a convenient app that allows users to book \n  a time slot for using the washing machine on their floor. ",
+    description: "Washio is a washing machine booking app.",
     image: washioImage, // Use the imported washio image
     github: "https://github.com/KingRain/Washio",
     website: "https://washio.netlify.app/",
   },
   {
-    title: "Project 2",
-    description: "A brief description of Project 2.",
+    title: "GeoShift",
+    description: "GeoShift is a geographical data visualization tool.",
     image: "https://via.placeholder.com/300x200",
-    github: "https://github.com/yourusername/project2",
-    website: "https://project2.com",
+    github: "https://github.com/KingRain/geoshift",
+    website: "https://geoshift.com",
   },
+  {
+    title: "Shareload",
+    description: "Shareload is a file-sharing application for secure transfers.",
+    image: "https://via.placeholder.com/300x200",
+    github: "https://github.com/KingRain/shareload-client",
+    website: "https://shareload.com",
+  },
+  {
+    title: "Fullstack Dashboard",
+    description: "A comprehensive dashboard for managing full-stack projects.",
+    image: "https://via.placeholder.com/300x200",
+    github: "https://github.com/KingRain/fullstack-dashboard",
+    website: "https://fullstackdashboard.com",
+  },
+  
   // Add more projects as needed
 ];
 
@@ -66,6 +80,7 @@ export default function Projects() {
 
   return (
     <>
+    
       <section
         id="projects"
         className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black"
@@ -114,23 +129,33 @@ export default function Projects() {
                     <h3 className="text-xl font-bold text-white mb-3">
                       {project.title}
                     </h3>
-                    <p className="text-gray-300 mb-4">{project.description}</p>
+                    
                     <div className="flex justify-between">
                       <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-gray-700 bg-opacity-50 text-white px-4 py-2 rounded-lg hover:bg-opacity-70 transition duration-300"
+                        className="bg-gray-700 bg-opacity-50 text-white px-4 py-2 rounded-lg hover:bg-opacity-70 transition duration-300 flex items-center space-x-2"
                       >
-                        GitHub
+                        <img
+                          src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg"
+                          alt="GitHub"
+                          className="w-5 h-5"
+                        />
+                        <span>GitHub</span>
                       </a>
                       <a
                         href={project.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-blue-600 bg-opacity-50 text-white px-4 py-2 rounded-lg hover:bg-opacity-70 transition duration-300"
+                        className="bg-blue-600 bg-opacity-50 text-white px-4 py-2 rounded-lg hover:bg-opacity-70 transition duration-300 flex items-center space-x-2"
                       >
-                        Website
+                        <img
+                          src="https://cdn.jsdelivr.net/npm/circumicons@v1/icons/website/link.svg"
+                          alt="Website"
+                          className="w-5 h-5"
+                        />
+                        <span>Website</span>
                       </a>
                     </div>
                   </div>
@@ -158,9 +183,9 @@ export default function Projects() {
         </div>
 
         {/* Carousels Container */}
-        <div className="relative z-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg">
+        <div className="relative z-10 bg-white bg-opacity-5 backdrop-filter backdrop-blur-lg">
           {/* Animated technology logo carousel */}
-          <div className="overflow-hidden border-t border-b border-gray-700 py-8 relative">
+          <div className="overflow-hidden border-t border-b my-2 border-gray-700 py-8 relative">
             <motion.div
               className="flex"
               animate={{
@@ -188,17 +213,17 @@ export default function Projects() {
           </div>
 
           {/* Animated tools carousel */}
-          <div className="overflow-hidden border-t border-b border-gray-700 py-8 relative">
+          <div className="overflow-hidden border-t border-b my-2 border-gray-700 py-8 relative">
             <motion.div
               className="flex"
               animate={{
-                x: [0, -960],
+                x: [-960, 0],
               }}
               transition={{
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 20,
+                  duration: 12,
                   ease: "linear",
                 },
               }}
@@ -216,6 +241,7 @@ export default function Projects() {
           </div>
         </div>
       </section>
+      
     </>
   );
 }

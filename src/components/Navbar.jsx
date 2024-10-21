@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { HomeIcon } from "@heroicons/react/24/outline";
-import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar({ onNavItemClick }) {
   const [isOpen, setIsOpen] = useState(false);
