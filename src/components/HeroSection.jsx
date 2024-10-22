@@ -48,7 +48,7 @@ export default function HeroSection() {
         variants={itemVariants}
       >
         <img
-          src="./src/assets/images/avatar.jpg"
+          src="../src/assets/images/avatar.jpg"
           alt="Avatar"
           className="w-full h-full object-cover rounded-full"
         />
