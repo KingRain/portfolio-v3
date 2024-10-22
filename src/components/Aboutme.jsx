@@ -4,19 +4,19 @@ import { useEffect } from "react";
 
 const educationTimeline = [
     {
-        year: "2023",
-        degree: "Master of Science in Computer Science",
-        institution: "University of Technology",
+        year: "2028",
+        degree: "Bachelor of Technology in Computer Science",
+        institution: "Indian Institute of Information Technology, Kottayam",
     },
     {
-        year: "2020",
-        degree: "Bachelor of Science in Software Engineering",
-        institution: "Institute of Information Technology",
+        year: "2024",
+        degree: "Senior Secondary School Education",
+        institution: "Devamatha CMI Public School, Thrissur",
     },
     {
-        year: "2017",
-        degree: "High School Diploma",
-        institution: "City High School",
+        year: "2022",
+        degree: "Secondary School Education",
+        institution: "Devamatha CMI Public School, Thrissur",
     },
 ];
 
@@ -62,10 +62,7 @@ export default function AboutMe() {
                         }}
                         transition={{ duration: 0.5 }}
                     >
-                        Hello! I'm Sam, a passionate software developer with a strong
-                        background in computer science and software engineering. I love
-                        creating innovative solutions and working on exciting projects that
-                        make a difference.
+                        My name is Sam Joe Chalissery, and I am an 18-year-old passionate software developer with a strong foundation in computer science and software engineering. My journey into the world of programming began when a close friend, Simon, introduced me to coding, sparking my curiosity and love for technology.
                     </motion.p>
                     <br></br>
                     <motion.p
@@ -77,11 +74,19 @@ export default function AboutMe() {
                         }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        My journey in the tech world started with a fascination for
-                        computers and programming, which led me to pursue formal education
-                        in this field. Over the years, I've honed my skills in various
-                        programming languages and tools, and I'm always eager to learn more
-                        and take on new challenges.
+                        Over the years, I've explored various domains, including game development, app development, web development, Discord bot creation, automation, and scripting. During the COVID-19 pandemic, I dedicated significant time to upskilling and deepening my expertise in these areas.
+                    </motion.p>
+                    <br></br>
+                    <motion.p
+                        ref={ref}
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={controls}
+                        variants={{
+                            visible: { x: 0, opacity: 1 },
+                        }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                    >
+                        Currently, I am pursuing a Bachelor's degree in Computer Science (B.Tech). What drives me is the challenge of solving real-world problems through innovative software solutions, constantly pushing the boundaries of what’s possible.
                     </motion.p>
                 </div>
 

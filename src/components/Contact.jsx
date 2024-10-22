@@ -13,9 +13,9 @@ const socials = [
         icon: "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/linkedin.svg",
     },
     {
-        name: "Twitter",
-        url: "https://twitter.com/Rainboi15",
-        icon: "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/twitter.svg",
+        name: "Instagram",
+        url: "https://instagram.com/samjoe.png",
+        icon: "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/instagram.svg",
     },
     {
         name: "Email",
@@ -29,7 +29,7 @@ export default function Contact() {
     return (
         <section
             id="contact"
-            className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black"
+            className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black font-inter"
         >
             {/* Animated dots background */}
             <div className="absolute inset-0 z-0">
@@ -46,8 +46,11 @@ export default function Contact() {
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4 py-16">
                 <h2 className="text-4xl font-bold text-white mb-12 text-center">
-                    Contact
+                    Get in Touch
                 </h2>
+                <p className="text-white text-lg mb-8 text-center">
+                    I'm always open to new opportunities and collaborations. Feel free to reach out to me on any of the following platforms. 😄
+                </p>
 
                 <div className="flex flex-wrap justify-center items-center">
                     {socials.map((social, index) => (
@@ -56,7 +59,7 @@ export default function Contact() {
                             href={social.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl shadow-lg m-4 p-6 flex flex-col items-center justify-center w-40 h-40 border border-gray-200 border-opacity-20 hover:bg-opacity-20 transition duration-300"
+                            className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl shadow-lg m-4 p-6 flex flex-col items-center justify-center w-36 h-36 border border-gray-200 border-opacity-20 hover:bg-opacity-20 transition duration-300"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >

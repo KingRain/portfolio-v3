@@ -1,6 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import washioImage from "../assets/images/washio.png";
+import geoshiftImage from "../assets/images/geoshift.png";
+import shareloadImage from "../assets/images/shareload.png";
+import dashboardImage from "../assets/images/dashboard.png";
 
 // Simple Icons URLs for programming languages and tools
 const toolLogos = [
@@ -34,21 +37,21 @@ const projects = [
   {
     title: "GeoShift",
     description: "GeoShift is a geographical data visualization tool.",
-    image: "https://via.placeholder.com/300x200",
+    image: geoshiftImage,
     github: "https://github.com/KingRain/geoshift",
     website: "https://geoshift.com",
   },
   {
     title: "Shareload",
     description: "Shareload is a file-sharing application for secure transfers.",
-    image: "https://via.placeholder.com/300x200",
+    image: shareloadImage,
     github: "https://github.com/KingRain/shareload-client",
     website: "https://shareload.com",
   },
   {
     title: "Fullstack Dashboard",
     description: "A comprehensive dashboard for managing full-stack projects.",
-    image: "https://via.placeholder.com/300x200",
+    image: dashboardImage,
     github: "https://github.com/KingRain/fullstack-dashboard",
     website: "https://fullstackdashboard.com",
   },
@@ -61,7 +64,7 @@ export default function Projects() {
   const controls = useAnimation();
 
   useEffect(() => {
-    controls.start({ x: -activeIndex * 320 });
+    controls.start({ x: -activeIndex * 370 });
   }, [activeIndex, controls]);
 
   const handleDragEnd = (event, info) => {
@@ -74,7 +77,7 @@ export default function Projects() {
       setActiveIndex(Math.max(0, Math.min(newIndex, projects.length - 1)));
     } else {
       // If the drag distance is less than the threshold, snap back to the current project
-      controls.start({ x: -activeIndex * 320 });
+      controls.start({ x: -activeIndex * 370 });
     }
   };
 
@@ -151,9 +154,9 @@ export default function Projects() {
                         className="bg-blue-600 bg-opacity-50 text-white px-4 py-2 rounded-lg hover:bg-opacity-70 transition duration-300 flex items-center space-x-2"
                       >
                         <img
-                          src="https://cdn.jsdelivr.net/npm/circumicons@v1/icons/website/link.svg"
+                          src="../src/assets/images/link.png"
                           alt="Website"
-                          className="w-5 h-5"
+                          className="w-5 h-5 invert"
                         />
                         <span>Website</span>
                       </a>

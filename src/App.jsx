@@ -4,10 +4,15 @@ import HeroSection from "./components/HeroSection";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import AboutMe from "./components/Aboutme";
+import Footer from "./components/Footer";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
   const heroRef = useRef(null);
+  const projectsRef = useRef(null);
+  const aboutMeRef = useRef(null);
+  const contactRef = useRef(null);
+  const footerRef = useRef(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -43,7 +48,15 @@ function App() {
       case "home":
         ref = heroRef;
         break;
-      // Add cases for other sections...
+      case "projects":
+        ref = projectsRef;
+        break;
+      case "aboutme":
+        ref = aboutMeRef;
+        break;
+      case "contact":
+        ref = contactRef;
+        break;
       default:
         ref = null;
     }
@@ -67,9 +80,10 @@ function App() {
       <div className="relative z-20">
         <Navbar onNavItemClick={handleNavItemClick} />
         <HeroSection ref={heroRef} />
-        <Projects />
-        <AboutMe />
-        <Contact />
+        <Projects ref={projectsRef} />
+        <AboutMe ref={aboutMeRef} />
+        <Contact ref={contactRef} />
+        <Footer ref={footerRef} />
       </div>
     </div>
   );
