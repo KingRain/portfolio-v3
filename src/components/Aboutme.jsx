@@ -10,7 +10,7 @@ const educationTimeline = [
     },
     {
         year: "2024",
-        degree: "Senior Secondary School Education",
+        degree: "High School Education",
         institution: "Devamatha CMI Public School, Thrissur",
     },
     {
@@ -74,7 +74,7 @@ export default function AboutMe() {
                         }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        Over the years, I've explored various domains, including game development, app development, web development, Discord bot creation, automation, and scripting. During the COVID-19 pandemic, I dedicated significant time to upskilling and deepening my expertise in these areas.
+                        Over the years, I&apos;ve explored various domains, including game development, app development, web development, Discord bot creation, automation, and scripting. During the COVID-19 pandemic, I dedicated significant time to upskilling and deepening my expertise in these areas.
                     </motion.p>
                     <br></br>
                     <motion.p
@@ -86,7 +86,7 @@ export default function AboutMe() {
                         }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
-                        Currently, I am pursuing a Bachelor's degree in Computer Science (B.Tech). What drives me is the challenge of solving real-world problems through innovative software solutions, constantly pushing the boundaries of what’s possible.
+                        Currently, I am pursuing a Bachelor&apos;s degree in Computer Science (B.Tech). What drives me is the challenge of solving real-world problems through innovative software solutions, constantly pushing the boundaries of what’s possible.
                     </motion.p>
                 </div>
 
