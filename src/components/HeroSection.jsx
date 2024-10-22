@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import avatarImg from "../assets/images/avatar.jpg" // Import framer-motion
 
@@ -60,7 +60,7 @@ export default function HeroSection() {
         className="text-lg font-medium text-gray-200 flex items-center mb-4"
         variants={itemVariants}
       >
-        Hi, I'm Sam Joe Chalissery
+        Hi, I&apos;m Sam Joe Chalissery
         <motion.span
           className="ml-2"
           animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}

@@ -40,21 +40,21 @@ const projects = [
     description: "GeoShift is a geographical data visualization tool.",
     image: geoshiftImage,
     github: "https://github.com/KingRain/geoshift",
-    website: "https://geoshift.com",
+    website: "https://github.com/KingRain/geoshift",
   },
   {
     title: "Shareload",
     description: "Shareload is a file-sharing application for secure transfers.",
     image: shareloadImage,
     github: "https://github.com/KingRain/shareload-client",
-    website: "https://shareload.com",
+    website: "https://github.com/KingRain/shareload-client",
   },
   {
     title: "Fullstack Dashboard",
     description: "A comprehensive dashboard for managing full-stack projects.",
     image: dashboardImage,
     github: "https://github.com/KingRain/fullstack-dashboard",
-    website: "https://fullstackdashboard.com",
+    website: "https://github.com/KingRain/fullstack-dashboard",
   },
   
   // Add more projects as needed
@@ -87,19 +87,8 @@ export default function Projects() {
     
       <section
         id="projects"
-        className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black"
+        className="min-h-screen bg-gradient-to-b from-black/80 via-gray-800/80 to-black/80 text-white flex flex-col items-center justify-center relative"
       >
-        {/* Animated dots background */}
-        <div className="absolute inset-0 z-0">
-          <div
-            className="w-full h-full animate-move-bg"
-            style={{
-              backgroundImage:
-                "radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
-              backgroundSize: "50px 50px",
-            }}
-          ></div>
-        </div>
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-16">
@@ -189,7 +178,7 @@ export default function Projects() {
         {/* Carousels Container */}
         <div className="relative z-10 bg-white bg-opacity-5 backdrop-filter backdrop-blur-lg">
           {/* Animated technology logo carousel */}
-          <div className="overflow-hidden border-t border-b my-2 border-gray-700 py-8 relative">
+          <div className="overflow-hidden border-t border-b my-0 border-gray-700 py-8 relative">
             <motion.div
               className="flex"
               animate={{
@@ -217,7 +206,7 @@ export default function Projects() {
           </div>
 
           {/* Animated tools carousel */}
-          <div className="overflow-hidden border-t border-b my-2 border-gray-700 py-8 relative">
+          <div className="overflow-hidden border-t border-b border-gray-700 py-8 relative">
             <motion.div
               className="flex"
               animate={{

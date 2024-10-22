@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";

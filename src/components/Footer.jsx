@@ -25,18 +25,8 @@ export default function Footer() {
     }, []);
 
     return (
-        <footer className="relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black font-inter py-8">
-            {/* Animated dots background */}
-            <div className="absolute inset-0 z-0">
-                <div
-                    className="w-full h-full animate-move-bg"
-                    style={{
-                        backgroundImage:
-                            "radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
-                        backgroundSize: "50px 50px",
-                    }}
-                ></div>
-            </div>
+        <footer className="relative overflow-hidden bg-gradient-to-b from-black/80 via-black/80 to-black/80 font-inter py-8">
+           
 
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4 text-center text-white">
