@@ -32,7 +32,7 @@ export default function AboutMe() {
 
     return (
         <section
-            id="aboutme"
+            id="AboutMe"
             className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black"
         >
             {/* Animated dots background */}

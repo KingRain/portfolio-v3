@@ -40,7 +40,7 @@ export default function Footer() {
 
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4 text-center text-white">
-                <p className="mb-4">&copy; {new Date().getFullYear()} Sam Joe Chalissery. All rights reserved.</p>
+                <p className="mb-4">Copyright &copy; {new Date().getFullYear()} Sam Joe Chalissery. All rights reserved.</p>
                 {isVisible && (
                     <motion.button
                         onClick={scrollToTop}

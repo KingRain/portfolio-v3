@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar({ onNavItemClick }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentSection, setCurrentSection] = useState("Home");
 
   const handleNavItemClick = (sectionId) => {
     setIsOpen(false); // Close the navbar
@@ -14,6 +15,27 @@ export default function Navbar({ onNavItemClick }) {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      let current = "Home";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 60) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      setCurrentSection(current.charAt(0).toUpperCase() + current.slice(1));
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-black text-white z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
@@ -21,7 +43,7 @@ export default function Navbar({ onNavItemClick }) {
         <HomeIcon className="h-6 w-6 cursor-pointer" onClick={() => handleNavItemClick("home")} />
 
         {/* Section Text */}
-        <div className="text-lg font-semibold">Home</div>
+        <div className="text-lg font-semibold">{currentSection}</div>
 
         {/* Hamburger Menu */}
         <button className="block sm:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -75,9 +97,9 @@ export default function Navbar({ onNavItemClick }) {
                 </li>
                 <li className="w-full">
                   <a
-                    href="#aboutme"
+                    href="#AboutMe"
                     className="p-2 block text-center hover:bg-gray-800"
-                    onClick={() => handleNavItemClick("aboutme")}
+                    onClick={() => handleNavItemClick("AboutMe")}
                   >
                     About
                   </a>
