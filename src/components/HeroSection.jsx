@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import { motion } from "framer-motion"; // Import framer-motion
+import { motion } from "framer-motion";
+import avatarImg from "../assets/images/avatar.jpg" // Import framer-motion
 
 export default function HeroSection() {
   const handleResumeClick = (e) => {
@@ -48,7 +49,7 @@ export default function HeroSection() {
         variants={itemVariants}
       >
         <img
-          src="../src/assets/images/avatar.jpg"
+          src={avatarImg}
           alt="Avatar"
           className="w-full h-full object-cover rounded-full"
         />

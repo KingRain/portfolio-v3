@@ -4,6 +4,7 @@ import washioImage from "../assets/images/washio.png";
 import geoshiftImage from "../assets/images/geoshift.png";
 import shareloadImage from "../assets/images/shareload.png";
 import dashboardImage from "../assets/images/dashboard.png";
+import linkIcon from "../assets/images/link.png";
 
 // Simple Icons URLs for programming languages and tools
 const toolLogos = [
@@ -154,7 +155,7 @@ export default function Projects() {
                         className="bg-blue-600 bg-opacity-50 text-white px-4 py-2 rounded-lg hover:bg-opacity-70 transition duration-300 flex items-center space-x-2"
                       >
                         <img
-                          src="../src/assets/images/link.png"
+                          src={linkIcon}
                           alt="Website"
                           className="w-5 h-5 invert"
                         />
