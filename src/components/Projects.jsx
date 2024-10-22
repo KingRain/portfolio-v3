@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import washioImage from "../public/assets/images/washio.png";
-import geoshiftImage from "../public/assets/images/geoshift.png";
-import shareloadImage from "../public/assets/images/shareload.png";
-import dashboardImage from "../public/assets/images/dashboard.png";
+import washioImage from "../assets/images/washio.png";
+import geoshiftImage from "../assets/images/geoshift.png";
+import shareloadImage from "../assets/images/shareload.png";
+import dashboardImage from "../assets/images/dashboard.png";
 
 // Simple Icons URLs for programming languages and tools
 const toolLogos = [
