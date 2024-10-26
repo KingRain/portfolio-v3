@@ -15,7 +15,12 @@ const toolLogos = [
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/css3.svg",
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/typescript.svg",
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/react.svg",
-  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/vuedotjs.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/vite.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/tailwindcss.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/expo.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/mysql.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/mongodb.svg"
+
 ];
 
 const toolIcons = [
@@ -24,6 +29,18 @@ const toolIcons = [
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/jetbrains.svg",
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/markdown.svg",
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/framer.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/heroku.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/vercel.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/supabase.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/firebase.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/git.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/npm.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/yarn.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/aseprite.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/inkscape.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/trello.svg",
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/notion.svg"
 ];
 
 // Sample project data
