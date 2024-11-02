@@ -1,11 +1,11 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import avatarImg from "../assets/images/avatar.jpg" // Import framer-motion
+import avatarImg from "../assets/images/avatar.jpg";
 
 export default function HeroSection() {
   const handleResumeClick = (e) => {
     e.preventDefault();
-    alert("Sorry, the resume is not yet made.");
+    window.open("./MyResume.pdf", "_blank");
   };
 
   const sectionRef = useRef(null);
