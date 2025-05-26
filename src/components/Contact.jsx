@@ -75,7 +75,7 @@ export default function Contact() {
                     animate={inView ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    I'm always open to new opportunities and collaborations. Feel free to reach out to me on any of the following platforms. 😄
+                    I'm always open to new opportunities and collaborations. Feel free to reach out to me on any of the following platforms :D
                 </motion.p>
 
                 <div className="flex flex-wrap justify-center items-center">

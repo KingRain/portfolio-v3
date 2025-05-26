@@ -4,6 +4,7 @@ import washioImage from "../assets/images/washio.png";
 import geoshiftImage from "../assets/images/geoshift.png";
 import shareloadImage from "../assets/images/shareload.png";
 import dashboardImage from "../assets/images/dashboard.png";
+import dragappImage from "../assets/images/dragapp.png";
 import linkIcon from "../assets/images/link.png";
 
 // Simple Icons URLs for programming languages and tools
@@ -19,8 +20,7 @@ const toolLogos = [
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/tailwindcss.svg",
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/expo.svg",
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/mysql.svg",
-  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/mongodb.svg"
-
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/mongodb.svg",
 ];
 
 const toolIcons = [
@@ -40,15 +40,23 @@ const toolIcons = [
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/aseprite.svg",
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/inkscape.svg",
   "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/trello.svg",
-  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/notion.svg"
+  "https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/notion.svg",
 ];
 
 // Sample project data
 const projects = [
   {
+    title: "DragApp",
+    description:
+      "DragApp is a bilingual youth-focused drug de-addiction app with AI support, anonymous reporting, and community features, used across Kerala.",
+    image: dragappImage,
+    github: "https://github.com/KingRain/",
+    website: "https://dragapp.vercel.app/",
+  },
+  {
     title: "Washio",
     description: "Washio is a washing machine booking app.",
-    image: washioImage, // Use the imported washio image
+    image: washioImage,
     github: "https://github.com/KingRain/Washio",
     website: "https://washio.netlify.app/",
   },
@@ -61,7 +69,8 @@ const projects = [
   },
   {
     title: "Shareload",
-    description: "Shareload is a file-sharing application for secure transfers.",
+    description:
+      "Shareload is a file-sharing application for secure transfers.",
     image: shareloadImage,
     github: "https://github.com/KingRain/shareload-client",
     website: "https://github.com/KingRain/shareload-client",
@@ -72,9 +81,7 @@ const projects = [
     image: dashboardImage,
     github: "https://github.com/KingRain/fullstack-dashboard",
     website: "https://github.com/KingRain/fullstack-dashboard",
-  },
-  
-  // Add more projects as needed
+  }
 ];
 
 export default function Projects() {
@@ -101,12 +108,10 @@ export default function Projects() {
 
   return (
     <>
-    
       <section
         id="projects"
         className="min-h-screen bg-gradient-to-b from-black/80 via-gray-800/80 to-black/80 text-white flex flex-col items-center justify-center relative"
       >
-
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 py-16">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">
@@ -139,7 +144,7 @@ export default function Projects() {
                     <h3 className="text-xl font-bold text-white mb-3">
                       {project.title}
                     </h3>
-                    
+
                     <div className="flex justify-between">
                       <a
                         href={project.github}
@@ -251,7 +256,6 @@ export default function Projects() {
           </div>
         </div>
       </section>
-      
     </>
   );
 }

@@ -51,7 +51,7 @@ export default function AboutMe() {
                         }}
                         transition={{ duration: 0.5 }}
                     >
-                        My name is Sam Joe Chalissery, and I am an 18-year-old passionate software developer with a strong foundation in computer science and software engineering. My journey into the world of programming began when a close friend, Simon, introduced me to coding, sparking my curiosity and love for technology.
+                        My name is Sam Joe Chalissery, and I am an 19-year-old passionate software developer with a strong foundation in computer science and software engineering. My journey into the world of programming began when a close friend, Simon, introduced me to coding, sparking my curiosity and love for technology.
                     </motion.p>
                     <br></br>
                     <motion.p
